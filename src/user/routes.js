@@ -8,7 +8,7 @@ userRouter.post("/login", comparePass, login);
 userRouter.get("/user", getAllUsers); 
 userRouter.get("/login", tokenCheck, login); 
 userRouter.patch("/user", updatePass); 
-
+userRouter.delete("/user", deleteUser); 
 
 //generate a token on createUser and login, token should include unique info from db entry, token should be in response
 //have an endpoint that finds a user in the db, using the id from token
