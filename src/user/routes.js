@@ -1,6 +1,6 @@
 const { Router } = require("express"); 
 const userRouter = Router(); 
-const { createUser, login, getAllUsers, updatePass } = require("./controllers"); 
+const { createUser, login, getAllUsers, updatePass, deleteUser } = require("./controllers"); 
 const { hashPass, comparePass, tokenCheck } = require("../middleware"); 
 
 userRouter.post("/user",hashPass, createUser); 
